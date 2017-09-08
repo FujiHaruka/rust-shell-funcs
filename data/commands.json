@@ -1,5 +1,6 @@
 [
   {
+    "index": 0,
     "func": "echo $1",
     "desc": "echo command"
   }

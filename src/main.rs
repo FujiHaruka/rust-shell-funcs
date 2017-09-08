@@ -22,30 +22,6 @@ fn main() {
     } else {
         print_usage();
     }
-
-    // let mut file = File::open("data/commands.json").unwrap();
-    // let mut commands_json_string = String::new();
-    // file.read_to_string(&mut commands_json_string);
-    //
-    // let value: Value = serde_json::from_str(&commands_json_string).unwrap();
-    //
-    // let commands = match value {
-    //     Value::Array(x) => x,
-    //     _ => vec![]
-    // };
-    //
-    //
-    // let command = commands.get(0).unwrap();
-    // let func = command["func"].as_str().unwrap();
-    // let desc = command["desc"].as_str().unwrap();
-    //
-    // exec_func(&func, vec!["hogehoge"]);
-
-    // for command in commands.into_iter() {
-    //     let ref func = command["func"];
-    //     let ref desc = command["desc"];
-    //     println!("{} {}", func, desc);
-    // }
 }
 
 fn ls(args: &[String]) {

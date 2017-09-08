@@ -1,0 +1,6 @@
+[package]
+name = "rust-shell-funcs"
+version = "0.1.0"
+authors = ["FujiHaruka <fujiharuka@realglobe.jp>"]
+
+[dependencies]

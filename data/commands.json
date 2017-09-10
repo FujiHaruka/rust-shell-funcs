@@ -1,7 +1,7 @@
 [
   {
     "index": 0,
-    "func": "echo $1",
-    "desc": "echo command"
+    "func": "echo hello $1 $FOO",
+    "desc": "sample echo command"
   }
 ]

@@ -1,5 +1,12 @@
+#![allow(dead_code)]
+#[macro_use]
 extern crate serde_json;
+#[macro_use]
+extern crate serde_derive;
 
+mod command_store;
+
+use command_store::CommandStore;
 use std::fs::File;
 use std::io::{Write, Read};
 use std::path::Path;
@@ -25,6 +32,8 @@ fn main() {
 }
 
 fn ls(args: &[String]) {
+    let command_store = CommandStore::new("data/command.json");
+
     match args.len() {
         0 => println!("show all"),
         1 => println!("show grep"),

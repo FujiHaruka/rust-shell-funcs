@@ -5,6 +5,7 @@ extern crate serde_json;
 extern crate serde_derive;
 
 mod command_store;
+mod json_storage;
 
 use command_store::CommandStore;
 use std::fs::File;

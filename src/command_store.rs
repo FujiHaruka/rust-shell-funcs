@@ -1,6 +1,7 @@
 extern crate serde;
 extern crate serde_json;
 
+use json_storage;
 use std::fs::File;
 use std::io;
 use std::io::{Write, Read};

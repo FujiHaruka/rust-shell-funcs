@@ -38,6 +38,7 @@ impl JsonStorage {
                        let bytes = json_str.as_bytes();
                        OpenOptions::new()
                            .write(true)
+                           .truncate(true)
                            .open(&self.path)
                            .map_err(|e| e.to_string())
                            .and_then(|mut file| {

@@ -12,7 +12,7 @@ pub struct CommandItem {
 }
 
 pub struct CommandManager {
-    commands: Vec<CommandItem>,
+    pub commands: Vec<CommandItem>,
     storage: JsonStorage,
 }
 
@@ -27,7 +27,7 @@ impl CommandManager {
         }
     }
 
-    pub fn get_command(self, index: usize) -> Option<CommandItem> {
+    pub fn get_command(&self, index: usize) -> Option<CommandItem> {
         self.commands.get(index).map(|item| item.clone())
     }
 

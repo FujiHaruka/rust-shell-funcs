@@ -27,7 +27,6 @@ impl JsonStorage {
                     .map_err(|e| e.to_string())
             })?;
 
-        println!("JSON {}", json_string);
         serde_json::from_str(&json_string)
             .map_err(|err| err.to_string())
     }

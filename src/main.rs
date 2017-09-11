@@ -11,13 +11,13 @@ use command_manager::{CommandManager, CommandItem};
 use std::process::{Command};
 use std::env;
 
-const MAIN_COMMAND: &str = "func";
+const MAIN_COMMAND: &str = "fnc";
 const SUB_COMMAND_RUN: &str = "run";
 const SUB_COMMAND_SHOW: &str = "ls";
 const SUB_COMMAND_ADD: &str = "add";
 const SUB_COMMAND_DELETE: &str = "delete";
 
-const STORAGE_PATH: &str = "data/commands.json";
+const STORAGE_PATH: &str = env!("RUST_SHELL_FUNCS_STORAGE_PATH");
 
 fn main() {
     let args: Vec<String> = env::args().collect();

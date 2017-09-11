@@ -3,8 +3,6 @@ extern crate serde_json;
 
 use json_storage::JsonStorage;
 use serde_json::{Value};
-use std::path::PathBuf;
-use std::fs;
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct CommandItem {
@@ -20,9 +18,7 @@ pub struct CommandManager {
 
 impl CommandManager {
     pub fn new(storage_path: &str) -> CommandManager {
-        let c = fs::canonicalize(PathBuf::from(storage_path)).unwrap();
-        let abs_path = c.to_str().unwrap();
-        let mut storage = JsonStorage::new(abs_path);
+        let mut storage = JsonStorage::new(storage_path);
         let value = storage.load().unwrap();
         let commands = convert_to_commands(value);
         CommandManager {

@@ -3,5 +3,10 @@
     "desc": "sample echo command",
     "func": "echo hello $1 $FOO",
     "index": 0
+  },
+  {
+    "desc": "",
+    "func": "git branch | grep -v master | xargs git branch -d",
+    "index": 1
   }
 ]

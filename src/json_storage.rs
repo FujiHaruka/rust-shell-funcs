@@ -56,7 +56,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let mut storage = JsonStorage::new("tmp/test_data.json");
+        let mut storage = JsonStorage::new("../tmp/test_data.json");
         let data = json!(["abc", "edf"]);
         storage.save(&data).unwrap();
         let loaded = storage.load().unwrap();
